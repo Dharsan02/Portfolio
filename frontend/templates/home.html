@@ -1,0 +1,324 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+  <title>Backend Developer Wave Glow</title>
+</head>
+
+<body>
+  <canvas id="snowCanvas"></canvas>
+  <nav>
+    <div class="logo" id="logo">&lt;D&gt;</div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#api-demo">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#postman-section">Contact</a>
+    </div>
+  </nav>
+
+  <div class="tv-overlay"></div>
+
+  <!-- HERO -->
+  <main class="hero">
+    <div class="text-grid">
+      <div class="column left">
+        <div class="text">Back-end</div>
+        <div class="text">Back-end</div>
+        <div class="text">Back-end</div>
+        <div class="text">Back-end</div>
+        <div class="text">Back-end</div>
+      </div>
+      <div class="column right">
+        <div class="text">Developer</div>
+        <div class="text">Developer</div>
+        <div class="text">Developer</div>
+        <div class="text">Developer</div>
+        <div class="text">Developer</div>
+      </div>
+    </div>
+
+    <div class="name-panel">
+      <div class="scroll-icon">
+        <div class="mouse"></div>
+        <div class="arrow">&#x2193;&#x2193;</div>
+      </div>
+      <div class="vertical-name">
+        <span>D</span>
+        <span>H</span>
+        <span>A</span>
+        <span>R</span>
+        <span>S</span>
+        <span>A</span>
+        <span>N</span>
+      </div>
+      <div class="mini-avatar">
+        <img src="{% static 'images/dharsan.png' %}" alt="Dharsan Avatar" />
+      </div>
+    </div>
+  </main>
+  <section id="api-demo">
+  <h4>Send a Request</h4>
+
+  <div class="api-box">
+    <div class="api-header">
+      <select id="method">
+        <option>GET</option>
+      </select>
+      <input type="text" class="api-url"value="https://portfolio-api.dharsan.dev/details" readonly>
+      <button onclick="showDetails()">Send</button>
+    </div>
+
+    <div class="response-box" id="responseBox1">
+      <p>Response will appear here...</p>
+    </div>
+  </div>
+</section>
+</section>
+
+  <div class="floor"></div>
+  <!-- ABOUT -->
+  <section class="about-section" id="about">
+    <div class="about-container">
+      <div class="about-left">
+        <h2>ABOUT ME</h2>
+        <p>Hi, I'm <span class="highlight">Dharsan!</span> 👋</p>
+        <p style="font-size: 1rem; letter-spacing: 0.03rem">
+         I’m a 22-year-old self-taught <strong>Back-end developer</strong> based in India. With a year of experience as a Backend Developer, I’ve developed a sharp eye for debug and attention to detail, which I seamlessly incorporate into my development work.
+        </p>
+        <p>
+        While I haven’t yet worked at a tech company, I’m eager to start my journey and grow as part of a dynamic team in the industry.
+        </p>
+        <div class="game-container">
+          <canvas id="runnerGame" width="400" height="60"></canvas>
+        </div>
+      </div>
+      <div class="about-right">
+<pre><code>
+  class Developer:
+
+   def __init__(self, name):
+
+    self.name = Dharsan
+
+    self.skills = ["Python","Django","REST API","MySQL",
+    "HTML & CSS"]
+
+    self.hard_worker = True
+
+    self.problem_solver = True
+
+    self.continuous_learner = True
+
+   def hireable(self):
+
+    return self.hard_worker and self.problem_solver 
+    and len(self.skills) >= 4</code></pre>
+      </div>
+    </div>
+  </section>
+  <section class="fullskill-section">
+  <div class="floor"></div>
+ <section class="skills-section">
+<div class="skill-left">
+
+
+  <div class="skill-card python">
+    <img src="{% static 'images/python1.png'  %}" alt="">
+    <div>
+      <h3>Python</h3>
+      <span>Programming language</span>
+    </div>
+  </div>
+
+  <div class="skill-card mysql">
+    <img src="{% static 'images/mysql1.png'  %}" alt="">
+    <div>
+      <h3>MySQL</h3>
+      <span>Database</span>
+    </div>
+  </div>
+
+  <div class="skill-card django">
+    <img src="{% static 'images/django1.png'  %}" alt="">
+    <div>
+      <h3>Django</h3>
+      <span>Web Framework</span>
+    </div>
+  </div>
+
+  <div class="skill-card htmlcss wide">
+    <img src="{% static 'images/html1.png'  %}" alt="">
+    <div>
+      <h3>HTML & CSS</h3>
+      <span>Web Foundation</span>
+    </div>
+  </div>
+
+  <div class="skill-card rest wide">
+    <img src="{% static 'images/api1.png'  %}" alt="">
+    <div>
+      <h3>REST API</h3>
+      <span>Backend</span>
+    </div>
+  </div>
+
+</div>
+    </div>
+  <div class="skill-right">
+  <div class="solar-system">
+    <!-- Center Django icon -->
+    <div class="center">
+      <img src="{% static 'images/django.png' %}" alt="Django Icon" />
+    </div>
+
+    <!-- Orbit 1 -->
+    <div class="orbit orbit1">
+      <div class="orbit-path"></div>
+      <div class="planet">
+        <img src="{% static 'images/python.png' %}" alt="Python Icon" />
+      </div>
+    </div>
+
+    <!-- Orbit 2 -->
+    <div class="orbit orbit2">
+      <div class="orbit-path"></div>
+      <div class="planet">
+        <img src="{% static 'images/mysql.png' %}" alt="MySQL Icon" />
+      </div>
+    </div>
+
+    <!-- Orbit 3 -->
+    <div class="orbit orbit3">
+      <div class="orbit-path"></div>
+      <div class="planet">
+        <img src="{% static 'images/api.png' %}" alt="API Icon" />
+      </div>
+    </div>
+  </div>
+  </div>
+  </section>
+</section>
+  <div class="floor"></div>
+        <section class="projects" id="projects">
+  <div class="project-grid">
+
+    <div class="project-card">
+      <div class="left-img">
+        <img src="{% static 'images/vote.png'  %}" alt="">
+      </div>
+      <div class="right-content">
+        <h3>E-Voting System</h3>
+        <p>Web Based Voting System</p>
+        <div class="tags">
+          <span>Django</span><span>HTML & CSS</span>
+        </div> 
+        <a class="view-btn" href="https://ethervote-sentinel.vercel.app/">View Project ></a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="left-img">
+        <img src="{% static 'images/job.png' %}" alt="">
+      </div>
+      <div class="right-content">
+        <h3>Job Portal</h3>
+        <p>Portal for College Students</p>
+        <div class="tags">
+          <span>Django</span><span>HTML & CSS</span>
+        </div>
+        <a class="view-btn" href="https://job-portal-ljn8.onrender.com/">View Project ></a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="left-img">
+        <img src="{% static 'images/object.png' %}" alt="">
+      </div>
+      <div class="right-content">
+        <h3>Object Detection</h3>
+        <p>YOLOv4 Based Detection</p>
+        <div class="tags">
+          <span>Python</span><span>YOLOv4</span>
+        </div>
+        <a class="view-btn" href="https://github.com/Dharsan02/Object-Dectetion-using-Yolo_v4/blob/main/yolov4_webcam.ipynb">View Project ></a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="left-img">
+        <img src="{% static 'images/anime.png' %}" alt="">
+      </div>
+      <div class="right-content">
+        <h3>Anime Generation</h3>
+        <p>Anime Image Generator</p>
+        <div class="tags">
+          <span>Python</span><span>Neural Network</span>
+        </div>
+        <a class="view-btn" href="https://github.com/Dharsan02/Anime-Image-Generation/blob/main/GEN-AI.ipynb">View Project ></a>
+      </div>
+    </div>
+  <div class="project-card">  
+  <div class="pro-soon">
+  <div class="countdown-container">
+    <div>
+    <h2>COMING SOON</h2>
+    </div>
+    <div class="countdown">
+      <div class="time-box"><span id="days">00</span><small>Days</small></div>
+      <div class="time-box"><span id="hours">00</span><small>Hours</small></div>
+      <div class="time-box"><span id="minutes">00</span><small>Min</small></div>
+      <div class="time-box"><span id="seconds">00</span><small>Sec</small></div>
+    </div>
+  </div>
+  </div>
+</div>
+
+  </div>
+</section>
+ <div class="floor"></div>
+ <section id="postman-section">
+  <div><h1>Contact</h1>
+  <div class="postman-box">
+    <!-- URL Section -->
+    <div class="url-bar">
+      <select id="method">
+        <option>POST</option>
+      </select>
+      <input
+        type="text"
+        id="url"
+        class="url"
+        value="http://127.0.0.1:8000/postman/send/"
+        readonly
+      />
+      <button class="send" id="sendBtn">Send</button>
+    </div>
+
+    <!-- Body Section -->
+    <div class="body">
+      <h4>Body (raw JSON):</h4>
+      <textarea id="bodyInput">
+{
+  "name": "Your Name",
+  "email": "your@email.com",
+  "message": "Type your message here"
+}
+      </textarea>
+    </div>
+
+    <!-- Response Section -->
+    <div class="response" id="responseBox">
+      Response will appear here...
+    </div>
+  </div>
+</section>
+
+
+<script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

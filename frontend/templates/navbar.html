@@ -1,0 +1,143 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name | Portfolio</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+  <!-- 🌫️ Navbar -->
+  <nav class="glass-navbar">
+    <div class="logo">YourName<span>.</span></div>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- 💫 Floating Social Sidebar -->
+  <div class="social-sidebar">
+    <a href="https://github.com/yourusername" target="_blank" class="social-link">
+      <img src="{% static 'icons/github.svg' %}" alt="GitHub">
+    </a>
+    <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-link">
+      <img src="{% static 'icons/linkedin.svg' %}" alt="LinkedIn">
+    </a>
+    <a href="https://leetcode.com/yourusername" target="_blank" class="social-link">
+      <img src="{% static 'icons/leetcode.svg' %}" alt="LeetCode">
+    </a>
+  </div>
+
+  <!-- 🪄 HERO -->
+  <section id="home" class="hero reveal">
+    <div class="hero-content">
+      <h1>Hey, I'm <span class="highlight">Your Name</span></h1>
+      <h3>Full-Stack Developer | Problem Solver | Designer</h3>
+      <p>I build immersive, modern web experiences using the latest technologies.</p>
+      <div class="hero-btns">
+        <a href="#projects" class="btn">View My Work</a>
+        <a href="#contact" class="btn-outline">Let's Talk</a>
+      </div>
+    </div>
+    <div class="animated-bg"></div>
+  </section>
+
+  <!-- 🧠 ABOUT -->
+  <section id="about" class="reveal">
+    <div class="about-wrapper">
+      <img src="{% static 'images/profile.jpg' %}" alt="Profile" class="profile-pic">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>I'm a passionate developer with a love for clean design and efficient code. My focus is on building digital products that are both visually appealing and highly functional.</p>
+        <div class="stats">
+          <div class="stat"><h3>3+</h3><p>Years Experience</p></div>
+          <div class="stat"><h3>20+</h3><p>Projects Completed</p></div>
+          <div class="stat"><h3>5+</h3><p>Technologies Mastered</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ⚙️ SKILLS -->
+  <section id="skills" class="reveal">
+    <h2>Skills & Tools</h2>
+    <div class="skills-list">
+      <div class="skill"><span>Python / Django</span><div class="bar"><div style="width: 90%"></div></div></div>
+      <div class="skill"><span>JavaScript / React</span><div class="bar"><div style="width: 85%"></div></div></div>
+      <div class="skill"><span>HTML / CSS / SCSS</span><div class="bar"><div style="width: 95%"></div></div></div>
+      <div class="skill"><span>UI / UX Design</span><div class="bar"><div style="width: 80%"></div></div></div>
+    </div>
+  </section>
+
+  <!-- 💼 EXPERIENCE -->
+  <section id="experience" class="reveal">
+    <h2>Experience</h2>
+    <div class="timeline">
+      <div class="timeline-item left">
+        <div class="content">
+          <h3>Software Engineer – XYZ Tech</h3>
+          <span>2023 – Present</span>
+          <p>Developed scalable Django APIs and interactive front-end dashboards using React and Tailwind CSS.</p>
+        </div>
+      </div>
+      <div class="timeline-item right">
+        <div class="content">
+          <h3>Web Developer – Freelance</h3>
+          <span>2021 – 2023</span>
+          <p>Created custom websites and apps for small businesses with responsive, SEO-optimized design.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🧩 PROJECTS -->
+  <section id="projects" class="reveal">
+    <h2>Featured Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-overlay">
+          <h3>Portfolio Website</h3>
+          <p>Elegant personal portfolio with Django backend and animations.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-overlay">
+          <h3>E-commerce Platform</h3>
+          <p>Full-stack Django-React shop with Stripe integration.</p>
+        </div>
+      </div>
+      <div class="project-card">
+        <div class="project-overlay">
+          <h3>AI Chat App</h3>
+          <p>Real-time chat app using WebSockets and OpenAI API.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 📬 CONTACT -->
+  <section id="contact" class="reveal">
+    <h2>Contact Me</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5"></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Your Name. Built with ❤️ using Django.</p>
+  </footer>
+
+  <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
