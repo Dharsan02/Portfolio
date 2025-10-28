@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: dharsan-portfolio
+    env: python
+    plan: free
+    buildCommand: "./manage.py collectstatic --noinput"
+    startCommand: "gunicorn portfolio.wsgi:application"
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: portfolio.settings
+      - key: PYTHON_VERSION
+        value: 3.10
