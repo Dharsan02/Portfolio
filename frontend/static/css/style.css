@@ -782,4 +782,169 @@ section {
 
 
 /* ✅ Responsive design */
+/* ✅ RESPONSIVE DESIGN */
+
+/* Tablets and small laptops */
+@media (max-width: 1200px) {
+  .text {
+    font-size: 3.5rem;
+  }
+
+  .about-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .skill-left {
+    grid-template-columns: repeat(2, 1fr);
+    width: 80%;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+    width: 90%;
+  }
+
+  .postman-box {
+    width: 90%;
+    height: auto;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  nav {
+    padding: 15px 25px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .text {
+    font-size: 2.8rem;
+  }
+
+  .text-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .name-panel {
+    width: 90px;
+    height: 350px;
+  }
+
+  .mini-avatar {
+    width: 70px;
+    height: 70px;
+  }
+
+  .about-left,
+  .about-right {
+    padding: 30px;
+  }
+
+  .skills-section {
+    flex-direction: column;
+    height: auto;
+    padding: 40px 0;
+  }
+
+  .skill-left {
+    grid-template-columns: repeat(2, 1fr);
+    width: 90%;
+  }
+
+  .solar-system {
+    width: 300px;
+    height: 300px;
+  }
+
+  .project-card {
+    flex-direction: column;
+    height: auto;
+    padding: 20px;
+  }
+
+  .left-img {
+    width: 100%;
+  }
+
+  .url-bar {
+    flex-direction: column;
+  }
+
+  .url-bar input {
+    width: 100%;
+  }
+
+  .url-bar button {
+    width: 100%;
+  }
+
+  .body textarea {
+    height: 200px;
+  }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 480px) {
+  .text {
+    font-size: 2rem;
+  }
+
+  .about-left h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-left p {
+    font-size: 0.9rem;
+  }
+
+  .skill-card h3 {
+    font-size: 16px;
+  }
+
+  .skill-card span {
+    font-size: 11px;
+  }
+
+  .postman-box {
+    padding: 15px;
+  }
+
+  .url-bar select {
+    font-size: 12px;
+  }
+
+  .url-bar input,
+  .url-bar button {
+    font-size: 12px;
+  }
+}
+
+/* Ultra-wide screens */
+@media (min-width: 1600px) {
+  .text {
+    font-size: 6rem;
+  }
+
+  .project-grid {
+    width: 70%;
+  }
+
+  .about-container {
+    max-width: 1400px;
+  }
+}
+
 
